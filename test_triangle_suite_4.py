@@ -20,3 +20,11 @@ def test_4_03_float_round_notriangle(monkeypatch, capsys):
     output_list = ["NoTriangle\n"]
     error_list = [""]
     input_outerr(input_list, output_list, error_list, monkeypatch, capsys)
+
+def test_4_04_Exit_then_data(monkeypatch, capsys):
+    input_list = ["Exit\n",
+                  "3.1 5.2 8.01\n",
+                  "8.01\n"] 
+    output_list = ["triangle classifier done\n"]
+    error_list = [""]
+    input_outerr(input_list, output_list, error_list, monkeypatch, capsys)
